@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TECHSPIRE — College Tech Club</title>
+    <meta
+      name="description"
+      content="TECHSPIRE is a student-run technical club focused on web, AI, cloud, and open-source collaboration. Join workshops, projects, hackathons, and a community that ships real products."
+    />
+    <meta property="og:title" content="TECHSPIRE — College Tech Club" />
+    <meta
+      property="og:description"
+      content="Innovate • Create • Inspire. A student-run technical club focused on web, AI, cloud, and open-source collaboration."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Roboto+Slab:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="logo.png" />
+  </head>
+  <body>
+    <!-- Noise texture overlay for premium grain -->
+    <div class="noise-overlay" aria-hidden="true"></div>
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar" id="navbar">
+      <nav class="nav-container">
+        <a href="#" class="nav-logo" id="nav-logo">
+          <img src="logo.png" alt="TECHSPIRE" class="nav-logo-img" />
+          TECHSPIRE
+        </a>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about" data-scroll="about">About</a></li>
+          <li><a href="event2.html">Events</a></li>
+          <li><a href="#resources" data-scroll="resources">Resources</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="#contact" data-scroll="contact">Contact</a></li>
+        </ul>
+        <a href="join.html" class="nav-cta magnetic-btn" id="nav-cta-btn"
+          >Join Us</a
+        >
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Toggle navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ===== HERO SECTION ===== -->
+      <section class="hero" id="hero">
+        <div class="hero-bg" id="hero-bg">
+          <canvas id="particle-canvas" class="hero-canvas"></canvas>
+        </div>
+        <div class="hero-content">
+          <h1 class="gradient-text">Welcome to<br />TECHSPIRE</h1>
+          <p class="hero-tagline">We are <span id="typewriter"></span></p>
+          <div class="hero-cta-group">
+            <a
+              href="event2.html"
+              class="btn-primary magnetic-btn"
+              id="hero-cta-explore"
+              >Explore Events</a
+            >
+            <a
+              href="join.html"
+              class="btn-outline magnetic-btn"
+              id="hero-cta-join"
+              >Join the Club</a
+            >
+          </div>
+        </div>
+        <div class="scroll-indicator" aria-hidden="true">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M12 5v14M5 12l7 7 7-7" />
+          </svg>
+        </div>
+      </section>
+
+      <!-- ===== ABOUT SECTION ===== -->
+      <div class="section-glow section-glow--about" aria-hidden="true"></div>
+      <section class="section" id="about">
+        <h2 class="section-title scroll-reveal">About TECHSPIRE</h2>
+        <p class="section-subtitle scroll-reveal">
+          We are a student-run technical club focused on web, AI, cloud, and
+          open-source collaboration. Join workshops, projects, hackathons, and a
+          community that ships real products.
+        </p>
+        <div class="stats-grid">
+          <div class="stat-card scroll-reveal">
+            <span class="counter" data-target="20">0</span>
+            <span class="stat-label">Members</span>
+          </div>
+          <div class="stat-card scroll-reveal">
+            <span class="counter" data-target="10">0</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-card scroll-reveal">
+            <span class="counter" data-target="30">0</span>
+            <span class="stat-label">Events / Year</span>
+          </div>
+          <div class="stat-card scroll-reveal">
+            <span class="counter" data-target="12">0</span>
+            <span class="stat-label">Awards</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== EVENTS SECTION ===== -->
+      <div class="section-glow section-glow--events" aria-hidden="true"></div>
+      <section class="section" id="events">
+        <h2 class="section-title scroll-reveal">Upcoming Events</h2>
+        <p class="section-subtitle scroll-reveal">
+          Mark your calendars — exciting events are coming your way.
+        </p>
+        <div class="cards-grid">
+          <div
+            class="tilt-card animated-border scroll-reveal"
+            id="event-solve-code"
+          >
+            <div class="card-icon">💻</div>
+            <h3 class="card-title">Solve-the-Code</h3>
+            <p class="card-description">
+              Learn, build & explore with our guided workshops and hackathons.
+              Put your coding skills to the test!
+            </p>
+            <span class="card-date">📍 Language Lab</span>
+            <br /><a href="event.html" class="card-link">Register →</a>
+          </div>
+          <div
+            class="tilt-card animated-border scroll-reveal"
+            id="event-tech-workshop"
+          >
+            <div class="card-icon">🧠</div>
+            <h3 class="card-title">Tech Knowledge Workshops</h3>
+            <p class="card-description">
+              Learn, build & explore with our guided workshops on cutting-edge
+              technologies including AI, Web, and Cloud.
+            </p>
+            <span class="card-date">📍 Language Lab</span>
+            <br /><a href="event.html" class="card-link">Register →</a>
+          </div>
+          <div
+            class="tilt-card animated-border scroll-reveal"
+            id="event-hackathon"
+          >
+            <div class="card-icon">🚀</div>
+            <h3 class="card-title">Hackathons</h3>
+            <p class="card-description">
+              Learn, build & explore with our guided workshops and hackathons.
+              Collaborate with peers to ship real products.
+            </p>
+            <span class="card-date">📍 Language Lab</span>
+            <br /><a href="event.html" class="card-link">Register →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TEAM SECTION ===== -->
+      <div class="section-glow section-glow--team" aria-hidden="true"></div>
+      <section class="section" id="team">
+        <h2 class="section-title scroll-reveal">Meet Our Team</h2>
+        <p class="section-subtitle scroll-reveal">
+          The people who make TECHSPIRE possible.
+        </p>
+        <div class="cards-grid team-grid">
+          <div class="spotlight-card scroll-reveal" id="team-bias">
+            <div class="spotlight-overlay"></div>
+            <img src="lead.png" alt="Bias Bhadra" class="team-photo" />
+            <h3 class="team-name">Bias Bhadra</h3>
+            <span class="team-role">Chairman</span>
+            <p class="team-bio">
+              Visionary leader guiding TECHSPIRE's mission to innovate, create,
+              and inspire the next generation of builders.
+            </p>
+          </div>
+          <div class="spotlight-card scroll-reveal" id="team-om">
+            <div class="spotlight-overlay"></div>
+            <img
+              src="Assets/leaders/OM SHARMA.jpg"
+              alt="Om Sharma"
+              class="team-photo"
+            />
+            <h3 class="team-name">Om Sharma</h3>
+            <span class="team-role">President</span>
+            <p class="team-bio">
+              Leads TECHSPIRE with a sharp product vision, turning ambitious
+              ideas into meaningful experiences, strong collaborations, and a
+              thriving community culture.
+            </p>
+          </div>
+          <div class="spotlight-card scroll-reveal" id="team-mihir">
+            <div class="spotlight-overlay"></div>
+            <img
+              src="Assets/leaders/MIHIR MAHATO.jpg"
+              alt="Mihir Mahato"
+              class="team-photo"
+            />
+            <h3 class="team-name">Mihir Mahato</h3>
+            <span class="team-role">Alumni</span>
+            <p class="team-bio">
+              Connects strategy with execution, helping the club grow through
+              practical thinking, clear direction, and meaningful impact.
+            </p>
+          </div>
+          <div class="spotlight-card scroll-reveal" id="team-parmvir">
+            <div class="spotlight-overlay"></div>
+            <img
+              src="Assets/leaders/PARMVIR SINGH.jpeg"
+              alt="Parmvir Singh"
+              class="team-photo"
+            />
+            <h3 class="team-name">Parmvir Singh</h3>
+            <span class="team-role">Alumni</span>
+            <p class="team-bio">
+              Fosters collaboration and mentorship, helping members stay
+              inspired, connected, and focused on building something lasting
+              together.
+            </p>
+          </div>
+          <div class="spotlight-card scroll-reveal" id="team-abhay">
+            <div class="spotlight-overlay"></div>
+            <img
+              src="Assets/leaders/ABHAY KUMAR.jpg"
+              alt="Abhay Kumar"
+              class="team-photo"
+            />
+            <h3 class="team-name">Abhay Kumar</h3>
+            <span class="team-role">Event Head</span>
+            <p class="team-bio">
+              Curates high-energy technical experiences that blend creativity,
+              learning, and execution, making every hackathon, workshop, and
+              event memorable.
+            </p>
+          </div>
+          <div class="spotlight-card scroll-reveal" id="team-harshit">
+            <div class="spotlight-overlay"></div>
+            <img
+              src="Assets/leaders/ABHISHEK PRASAD.png"
+              alt="Abhishek Prasad"
+              class="team-photo"
+            />
+            <h3 class="team-name">Abhishek Prasad</h3>
+            <span class="team-role">Web Developer</span>
+            <p class="team-bio">
+              Builds the digital experiences behind TECHSPIRE's identity,
+              crafting seamless interfaces, polished storytelling, and a
+              stronger online presence for the club.
+            </p>
+          </div>
+        </div>
+        <div
+          style="text-align: center; margin-top: 2.5rem"
+          class="scroll-reveal"
+        >
+          <a
+            href="team.html"
+            class="btn-outline magnetic-btn"
+            style="display: inline-block"
+            >View Full Team →</a
+          >
+        </div>
+      </section>
+
+      <!-- ===== RESOURCES SECTION ===== -->
+      <section class="section" id="resources">
+        <h2 class="section-title scroll-reveal">Resources</h2>
+        <p class="section-subtitle scroll-reveal">
+          Curated learning paths to help you level up your skills.
+        </p>
+        <div class="cards-grid">
+          <div
+            class="tilt-card animated-border scroll-reveal"
+            id="resource-webdev"
+          >
+            <div class="card-icon">🌐</div>
+            <h3 class="card-title">Web Development</h3>
+            <p class="card-description">
+              Master the fundamentals with our curated guides covering HTML,
+              CSS, JavaScript, and modern frameworks.
+            </p>
+            <div class="card-tags">
+              <span class="tag">HTML Full Guide</span>
+              <span class="tag">CSS Cheatsheet</span>
+              <span class="tag">JS Basics</span>
+            </div>
+            <a href="#" class="card-link">Browse Resources →</a>
+          </div>
+          <div
+            class="tilt-card animated-border scroll-reveal"
+            id="resource-dsa"
+          >
+            <div class="card-icon">🧩</div>
+            <h3 class="card-title">Data Structures</h3>
+            <p class="card-description">
+              Crack interviews and competitive programming with our DSA roadmap
+              and top 100 coding questions.
+            </p>
+            <div class="card-tags">
+              <span class="tag">DSA Roadmap</span>
+              <span class="tag">Top 100 Questions</span>
+            </div>
+            <a href="#" class="card-link">Browse Resources →</a>
+          </div>
+          <div class="tilt-card animated-border scroll-reveal" id="resource-ml">
+            <div class="card-icon">🤖</div>
+            <h3 class="card-title">Machine Learning</h3>
+            <p class="card-description">
+              Dive into AI/ML with our handbook covering NumPy, Pandas, and
+              building your first machine learning models.
+            </p>
+            <div class="card-tags">
+              <span class="tag">ML Handbook</span>
+              <span class="tag">NumPy + Pandas</span>
+            </div>
+            <a href="#" class="card-link">Browse Resources →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACT SECTION ===== -->
+      <section class="section" id="contact">
+        <h2 class="section-title scroll-reveal">Get In Touch</h2>
+        <p class="section-subtitle scroll-reveal">
+          Have a question or want to join? Drop us a message.
+        </p>
+        <div class="contact-wrapper scroll-reveal">
+          <form
+            class="contact-form"
+            id="contact-form"
+            method="POST"
+            action="https://script.google.com/macros/s/AKfycbw8Vd3tb5nPEoE7TQgmYj7J73tnyHgwzdr6yx5nnMpAJUh6mHZf2_yzMC8ZMRBnaaL5oQ/exec"
+            data-form-endpoint="https://script.google.com/macros/s/AKfycbw8Vd3tb5nPEoE7TQgmYj7J73tnyHgwzdr6yx5nnMpAJUh6mHZf2_yzMC8ZMRBnaaL5oQ/exec"
+          >
+            <input
+              type="text"
+              class="glow-input"
+              id="contact-name"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+            <input
+              type="email"
+              class="glow-input"
+              id="contact-email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <textarea
+              class="glow-input"
+              id="contact-message"
+              name="message"
+              placeholder="Your Message"
+              rows="5"
+              required
+            ></textarea>
+            <button
+              type="submit"
+              class="btn-primary magnetic-btn"
+              id="contact-submit"
+            >
+              Send Message
+            </button>
+          </form>
+          <p class="contact-email scroll-reveal">
+            Or email us at
+            <a href="mailto:techspire@club.edu">techspire@club.edu</a>
+          </p>
+          <div class="social-links scroll-reveal">
+            <a
+              href="#"
+              class="social-link"
+              aria-label="GitHub"
+              id="social-github"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="social-link"
+              aria-label="Instagram"
+              id="social-instagram"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="social-link"
+              aria-label="LinkedIn"
+              id="social-linkedin"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="social-link"
+              aria-label="Facebook"
+              id="social-facebook"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <p>
+        &copy; 2026 TECHSPIRE Club. Built with
+        <span class="footer-heart">💜</span> and lots of ☕
+      </p>
+      <p class="footer-sub">Innovate • Create • Inspire</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

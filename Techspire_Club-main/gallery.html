@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery — TECHSPIRE</title>
+    <meta
+      name="description"
+      content="TECHSPIRE Gallery — Moments from our hackathons, workshops, and events."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Roboto+Slab:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="logo.png" />
+  </head>
+  <body>
+    <!-- Noise texture overlay -->
+    <div class="noise-overlay" aria-hidden="true"></div>
+    <canvas
+      id="gallery-atmosphere-canvas"
+      class="gallery-atmosphere-background"
+      aria-hidden="true"
+    ></canvas>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar scrolled" id="navbar">
+      <nav class="nav-container">
+        <a href="index.html" class="nav-logo" id="nav-logo">
+          <img src="logo.png" alt="TECHSPIRE" class="nav-logo-img" />
+          TECHSPIRE
+        </a>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="event2.html">Events</a></li>
+          <li><a href="index.html#resources">Resources</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <a
+          href="index.html#contact"
+          class="nav-cta magnetic-btn"
+          id="nav-cta-btn"
+          >Join Us</a
+        >
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Toggle navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ===== GALLERY HERO ===== -->
+      <section class="page-hero">
+        <div class="page-hero-content">
+          <h1 class="gradient-text">Gallery</h1>
+          <p class="hero-tagline">
+            Moments captured from our hackathons, workshops, and community
+            events
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== GALLERY GRID ===== -->
+      <div class="section-glow section-glow--about" aria-hidden="true"></div>
+      <section class="section" id="gallery">
+        <h2 class="section-title scroll-reveal">Event Highlights</h2>
+        <p class="section-subtitle scroll-reveal">
+          Relive the energy, collaboration, and innovation from our events.
+        </p>
+
+        <div class="gallery-grid">
+          <div
+            class="gallery-item scroll-reveal"
+            data-caption="Team brainstorming at Hack-the-Web"
+          >
+            <img
+              src="gallery1.jpg"
+              alt="Team brainstorming at Hack-the-Web"
+              class="gallery-img"
+              loading="lazy"
+            />
+            <div class="gallery-caption">
+              <h3>Hack-the-Web</h3>
+              <p>Team brainstorming session</p>
+            </div>
+          </div>
+
+          <div
+            class="gallery-item scroll-reveal"
+            data-caption="Workshop on modern web technologies"
+          >
+            <img
+              src="gallery2.jpg"
+              alt="Workshop on modern web technologies"
+              class="gallery-img"
+              loading="lazy"
+            />
+            <div class="gallery-caption">
+              <h3>Tech Workshop</h3>
+              <p>Hands-on learning experience</p>
+            </div>
+          </div>
+
+          <div
+            class="gallery-item scroll-reveal"
+            data-caption="TECHSPIRE community meetup"
+          >
+            <img
+              src="gallery3.jpg"
+              alt="TECHSPIRE community meetup"
+              class="gallery-img"
+              loading="lazy"
+            />
+            <div class="gallery-caption">
+              <h3>Community Meetup</h3>
+              <p>Building connections that last</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== JOIN CTA ===== -->
+      <section class="section" style="text-align: center">
+        <div class="scroll-reveal">
+          <h2 class="section-title">Be Part of the Next Moment</h2>
+          <p class="section-subtitle">
+            Join TECHSPIRE and create memories while building the future.
+          </p>
+          <a
+            href="index.html#contact"
+            class="btn-primary magnetic-btn"
+            style="display: inline-block; margin-top: 1rem"
+            >Join the Club</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== LIGHTBOX MODAL ===== -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close">
+        &times;
+      </button>
+      <img src="" alt="" class="lightbox-img" id="lightbox-img" />
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <p>
+        &copy; 2025 TECHSPIRE Club. Built with
+        <span class="footer-heart">💜</span> and lots of ☕
+      </p>
+      <p class="footer-sub">Innovate • Create • Inspire</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      // Gallery lightbox
+      document.addEventListener("DOMContentLoaded", () => {
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        const lightboxClose = document.getElementById("lightbox-close");
+
+        document.querySelectorAll(".gallery-item").forEach((item) => {
+          item.addEventListener("click", () => {
+            const img = item.querySelector(".gallery-img");
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add("active");
+            lightbox.setAttribute("aria-hidden", "false");
+          });
+        });
+
+        lightboxClose.addEventListener("click", () => {
+          lightbox.classList.remove("active");
+          lightbox.setAttribute("aria-hidden", "true");
+        });
+
+        lightbox.addEventListener("click", (e) => {
+          if (e.target === lightbox) {
+            lightbox.classList.remove("active");
+            lightbox.setAttribute("aria-hidden", "true");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events 2 — TECHSPIRE</title>
+    <meta
+      name="description"
+      content="TECHSPIRE Events — Hackathons, workshops, and coding challenges. Join us!"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Roboto+Slab:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        background: #000000;
+        color: white;
+        font-family: var(--font-body);
+      }
+
+      .page-shader {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        pointer-events: none;
+      }
+
+      main,
+      .footer {
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 120px 2rem 80px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        background: transparent;
+      }
+
+      .hero h1 {
+        font-family: var(--font-heading);
+        font-size: clamp(2.75rem, 5vw, 4.5rem);
+        line-height: 1.05;
+        letter-spacing: -1px;
+        color: #ffffff;
+        margin: 0 0 1rem;
+      }
+
+      .hero p {
+        max-width: 760px;
+        margin: 0 auto 2rem;
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 1.05rem;
+        line-height: 1.8;
+      }
+
+      .hero .btn-primary {
+        display: inline-block;
+        padding: 16px 34px;
+        border-radius: var(--radius-sm);
+        background: var(--accent-1);
+        color: #211b11;
+        font-weight: 700;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      .hero .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.24);
+      }
+
+      .section {
+        padding: 100px 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .section-title {
+        font-family: var(--font-heading);
+        font-size: clamp(2.25rem, 4vw, 3.4rem);
+        color: white;
+        margin-bottom: 0.75rem;
+        text-align: center;
+      }
+
+      .section-subtitle {
+        max-width: 680px;
+        margin: 0 auto 2.5rem;
+        color: rgba(255, 255, 255, 0.7);
+        text-align: center;
+        line-height: 1.8;
+      }
+
+      .cards-grid {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
+
+      .card {
+        background: rgba(15, 15, 20, 0.92);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: var(--radius-md);
+        padding: 2rem;
+        backdrop-filter: blur(14px);
+      }
+
+      .card-title {
+        font-family: var(--font-heading);
+        font-size: 1.35rem;
+        margin-bottom: 0.8rem;
+        color: white;
+      }
+
+      .card-description {
+        color: rgba(255, 255, 255, 0.72);
+        margin-bottom: 1rem;
+        line-height: 1.8;
+      }
+
+      .card-date {
+        display: inline-flex;
+        padding: 0.55rem 0.95rem;
+        background: rgba(226, 169, 75, 0.12);
+        color: #d0d0ff;
+        border-radius: var(--radius-sm);
+        font-size: 0.9rem;
+      }
+
+      .footer {
+        padding: 3rem 2rem;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.6);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="noise-overlay" aria-hidden="true"></div>
+    <header class="navbar" id="navbar">
+      <nav class="nav-container">
+        <a href="index.html" class="nav-logo" id="nav-logo">
+          <img src="logo.png" alt="TECHSPIRE" class="nav-logo-img" />
+          TECHSPIRE
+        </a>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="event2.html" class="active">Events</a></li>
+          <li><a href="index.html#resources">Resources</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <a
+          href="index.html#contact"
+          class="nav-cta magnetic-btn"
+          id="nav-cta-btn"
+          >Join Us</a
+        >
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Toggle navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+    <div id="page-shader" class="page-shader"></div>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h1>TECHSPIRE Event</h1>
+          <p>
+            Experience a rich, full-screen shader background that blends deep
+            black with glowing streaks and motion behind the hero content.
+          </p>
+          <a href="#upcoming" class="btn-primary">View Events ↓</a>
+        </div>
+      </section>
+
+      <section class="section" id="upcoming">
+        <h2 class="section-title">Upcoming Events</h2>
+        <p class="section-subtitle">
+          Discover the next wave of workshops, hackathons, and tech experiences
+          built for ambitious creators.
+        </p>
+        <div class="cards-grid">
+          <div class="card">
+            <div class="card-title">Solve-the-Code</div>
+            <div class="card-description">
+              Learn, build & explore with our guided workshops and hackathons.
+              Put your coding skills to the test!
+            </div>
+            <div class="card-date">📍 Language Lab</div>
+          </div>
+          <div class="card">
+            <div class="card-title">Tech Knowledge Workshops</div>
+            <div class="card-description">
+              Learn, build & explore with our guided workshops on AI, Web, and
+              Cloud technologies.
+            </div>
+            <div class="card-date">📍 Language Lab</div>
+          </div>
+          <div class="card">
+            <div class="card-title">Hackathons</div>
+            <div class="card-description">
+              Collaborate with peers to ship real products during our intensive
+              hackathon sprints.
+            </div>
+            <div class="card-date">📍 Language Lab</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      &copy; 2025 TECHSPIRE Club. Built with 💜 and ambition.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      (function () {
+        var container = document.getElementById("page-shader");
+        if (!container || !window.THREE) return;
+
+        var renderer = new THREE.WebGLRenderer({
+          antialias: true,
+          alpha: false,
+        });
+        renderer.setPixelRatio(window.devicePixelRatio || 1);
+        renderer.setClearColor(0x000000, 1);
+        renderer.domElement.style.position = "absolute";
+        renderer.domElement.style.top = "0";
+        renderer.domElement.style.left = "0";
+        renderer.domElement.style.width = "100%";
+        renderer.domElement.style.height = "100%";
+        container.appendChild(renderer.domElement);
+
+        var scene = new THREE.Scene();
+        var camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+
+        var material = new THREE.ShaderMaterial({
+          uniforms: {
+            iTime: { value: 0 },
+            iResolution: {
+              value: new THREE.Vector2(window.innerWidth, window.innerHeight),
+            },
+          },
+          vertexShader: `
+            void main() {
+              gl_Position = vec4(position, 1.0);
+            }
+          `,
+          fragmentShader: `
+            uniform float iTime;
+            uniform vec2 iResolution;
+
+            #define NUM_OCTAVES 3
+
+            float rand(vec2 n) {
+              return fract(sin(dot(n, vec2(12.9898, 4.1414))) * 43758.5453);
+            }
+
+            float noise(vec2 p) {
+              vec2 ip = floor(p);
+              vec2 u = fract(p);
+              u = u*u*(3.0-2.0*u);
+              float res = mix(
+                mix(rand(ip), rand(ip + vec2(1.0, 0.0)), u.x),
+                mix(rand(ip + vec2(0.0, 1.0)), rand(ip + vec2(1.0, 1.0)), u.x), u.y);
+              return res * res;
+            }
+
+            float fbm(vec2 x) {
+              float v = 0.0;
+              float a = 0.3;
+              vec2 shift = vec2(100);
+              mat2 rot = mat2(cos(0.5), sin(0.5), -sin(0.5), cos(0.5));
+              for (int i = 0; i < NUM_OCTAVES; ++i) {
+                v += a * noise(x);
+                x = rot * x * 2.0 + shift;
+                a *= 0.4;
+              }
+              return v;
+            }
+
+            void main() {
+              vec2 shake = vec2(sin(iTime * 1.2) * 0.005, cos(iTime * 2.1) * 0.005);
+              vec2 p = ((gl_FragCoord.xy + shake * iResolution.xy) - iResolution.xy * 0.5) / iResolution.y * mat2(6.0, -4.0, 4.0, 6.0);
+              vec2 v;
+              vec4 o = vec4(0.0);
+              float f = 2.0 + fbm(p + vec2(iTime * 5.0, 0.0)) * 0.5;
+
+              for (float i = 0.0; i < 35.0; i++) {
+                v = p + cos(i * i + (iTime + p.x * 0.08) * 0.025 + i * vec2(13.0, 11.0)) * 3.5 + vec2(sin(iTime * 3.0 + i) * 0.003, cos(iTime * 3.5 - i) * 0.003);
+                float tailNoise = fbm(v + vec2(iTime * 0.5, i)) * 0.3 * (1.0 - (i / 35.0));
+                vec4 auroraColors = vec4(
+                  0.1 + 0.3 * sin(i * 0.2 + iTime * 0.4),
+                  0.3 + 0.5 * cos(i * 0.3 + iTime * 0.5),
+                  0.7 + 0.3 * sin(i * 0.4 + iTime * 0.3),
+                  1.0
+                );
+                vec4 currentContribution = auroraColors * exp(sin(i * i + iTime * 0.8)) / length(max(v, vec2(v.x * f * 0.015, v.y * 1.5)));
+                float thinnessFactor = smoothstep(0.0, 1.0, i / 35.0) * 0.6;
+                o += currentContribution * (1.0 + tailNoise * 0.8) * thinnessFactor;
+              }
+
+              o = tanh(pow(o / 100.0, vec4(1.6)));
+              gl_FragColor = o * 1.5;
+            }
+          `,
+        });
+
+        var geometry = new THREE.PlaneGeometry(2, 2);
+        var mesh = new THREE.Mesh(geometry, material);
+        scene.add(mesh);
+
+        var frameId;
+        var animate = function () {
+          material.uniforms.iTime.value += 0.016;
+          renderer.render(scene, camera);
+          frameId = requestAnimationFrame(animate);
+        };
+
+        var resize = function () {
+          var rect = container.getBoundingClientRect();
+          renderer.setSize(rect.width, rect.height);
+          material.uniforms.iResolution.value.set(rect.width, rect.height);
+        };
+
+        window.addEventListener("resize", resize);
+        resize();
+        animate();
+      })();
+    </script>
+  </body>
+</html>
