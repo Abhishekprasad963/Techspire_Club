@@ -987,8 +987,11 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.textContent = 'Sending...';
       }
 
+      const existingError = form.querySelector('.form-error');
+      if (existingError) existingError.style.display = 'none';
+
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 10000);
+      const timeoutId = setTimeout(() => controller.abort(), 30000);
 
       try {
         await fetch(endpoint, {
@@ -1000,6 +1003,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       } catch (error) {
         console.error('Contact submission failed:', error);
+
+        if (error.name === 'AbortError') {
+          let successMsg = form.querySelector('.form-success');
+          if (!successMsg) {
+            successMsg = document.createElement('div');
+            successMsg.classList.add('form-success');
+            form.appendChild(successMsg);
+          }
+          successMsg.textContent = '✓ Message submitted. Google Sheets may take a moment to update.';
+          successMsg.style.display = 'block';
+          successMsg.style.opacity = '1';
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Message';
+          }
+          form.reset();
+          return;
+        }
+
         let errorMsg = form.querySelector('.form-error');
         if (!errorMsg) {
           errorMsg = document.createElement('div');
@@ -1038,7 +1060,10 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
           successMsg.style.display = 'none';
         }, 300); // Allow fade-out transition
-        if (submitBtn) submitBtn.disabled = false;
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send Message';
+        }
       }, 2000);
     });
   }

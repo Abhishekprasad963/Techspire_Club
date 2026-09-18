@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -101,99 +101,38 @@
         text-decoration: none;
       }
 
-      .contact-wrap {
+      .cta-wrap {
         max-width: 960px;
-        margin: 42px auto 0;
+        margin: 48px auto 0;
+        display: flex;
+        justify-content: center;
       }
 
-      .section-heading {
-        text-align: center;
-        margin-bottom: 24px;
-      }
-
-      .section-heading h2 {
-        font-size: clamp(2.4rem, 4vw, 4rem);
-        line-height: 1;
-        margin: 0;
-        font-weight: 800;
-        font-family: "Roboto Slab", serif;
-      }
-
-      .section-heading .rule {
-        width: 110px;
-        height: 4px;
-        background: linear-gradient(90deg, var(--gold), var(--gold-strong));
-        border-radius: 999px;
-        margin: 18px auto 0;
-      }
-
-      .section-subtitle {
-        margin-top: 18px;
-        text-align: center;
-        color: var(--muted);
-        font-size: clamp(1.1rem, 2vw, 1.7rem);
-        line-height: 1.7;
-      }
-
-      .contact-form {
+      .primary-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
-        max-width: 960px;
-        margin: 0 auto;
-      }
-
-      .input-field,
-      .textarea-field {
-        width: 100%;
-        border: 1px solid var(--input-border);
-        border-radius: 12px;
-        background: rgba(255, 255, 255, 0.02);
-        color: var(--text);
-        padding: 22px 18px;
-        font-size: 1.1rem;
-        font-family: "DM Sans", sans-serif;
-        outline: none;
-        transition: border-color 0.2s ease, box-shadow 0.2s ease;
-      }
-
-      .input-field::placeholder,
-      .textarea-field::placeholder {
-        color: rgba(255, 255, 255, 0.42);
-      }
-
-      .input-field:focus,
-      .textarea-field:focus {
-        border-color: rgba(226, 182, 109, 0.8);
-        box-shadow: 0 0 0 3px rgba(226, 182, 109, 0.12);
-      }
-
-      .field-group {
-        margin-bottom: 18px;
-      }
-
-      .textarea-field {
-        min-height: 220px;
-        resize: vertical;
-      }
-
-      .submit-btn {
-        display: block;
-        width: 100%;
-        max-width: 100%;
+        max-width: 900px;
+        min-height: 120px;
+        padding: 20px 28px;
         border: none;
-        border-radius: 12px;
-        background: linear-gradient(180deg, #e5bf7a, #d4a65f);
+        border-radius: 18px;
+        background: linear-gradient(180deg, #e1b86a, #d3a354);
         color: #111111;
-        font-size: clamp(1.1rem, 2vw, 2rem);
+        text-decoration: none;
+        font-size: clamp(2.2rem, 4vw, 4rem);
         font-weight: 700;
-        padding: 20px 24px;
-        cursor: pointer;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-        box-shadow: 0 10px 20px rgba(226, 182, 109, 0.2);
+        line-height: 1.1;
+        box-shadow: 0 15px 30px rgba(226, 182, 109, 0.2);
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
       }
 
-      .submit-btn:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 16px 24px rgba(226, 182, 109, 0.25);
+      .primary-cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 22px 38px rgba(226, 182, 109, 0.25);
       }
 
       @media (max-width: 640px) {
@@ -229,57 +168,8 @@
         </div>
       </div>
 
-      <div class="contact-wrap">
-        <div class="section-heading">
-          <h2>Get In Touch</h2>
-          <div class="rule" aria-hidden="true"></div>
-        </div>
-
-        <p class="section-subtitle">
-          Have a question or want to join? Drop us a message.
-        </p>
-
-        <form
-          class="contact-form"
-          id="contact-form"
-          method="POST"
-          action="https://script.google.com/macros/s/AKfycbw8Vd3tb5nPEoE7TQgmYj7J73tnyHgwzdr6yx5nnMpAJUh6mHZf2_yzMC8ZMRBnaaL5oQ/exec"
-          data-form-endpoint="https://script.google.com/macros/s/AKfycbw8Vd3tb5nPEoE7TQgmYj7J73tnyHgwzdr6yx5nnMpAJUh6mHZf2_yzMC8ZMRBnaaL5oQ/exec"
-        >
-          <div class="field-group">
-            <input
-              type="text"
-              class="input-field"
-              id="contact-name"
-              name="name"
-              placeholder="Your Name"
-              required
-            />
-          </div>
-
-          <div class="field-group">
-            <input
-              type="email"
-              class="input-field"
-              id="contact-email"
-              name="email"
-              placeholder="Your Email"
-              required
-            />
-          </div>
-
-          <div class="field-group">
-            <textarea
-              class="textarea-field"
-              id="contact-message"
-              name="message"
-              placeholder="Your Message"
-              required
-            ></textarea>
-          </div>
-
-          <button type="submit" class="submit-btn">Send Message</button>
-        </form>
+      <div class="cta-wrap">
+        <a class="primary-cta" href="index.html#contact">Get In Touch</a>
       </div>
     </div>
   </body>
