@@ -320,30 +320,101 @@
 
         <div class="content-grid">
           <section class="card" id="html-section">
-            <h2>HTML Basics</h2>
+            <h2>HTML Full Guide</h2>
             <ul>
               <li>
-                Use semantic tags like <strong>&lt;header&gt;</strong>,
-                <strong>&lt;main&gt;</strong>, and
-                <strong>&lt;section&gt;</strong>.
+                HTML gives a webpage its structure. Start with
+                <strong>&lt;!DOCTYPE html&gt;</strong>, then use
+                <strong>&lt;html&gt;</strong>, <strong>&lt;head&gt;</strong>,
+                and <strong>&lt;body&gt;</strong>.
               </li>
               <li>
-                Always include a title and meta viewport in the document head.
+                Add <strong>&lt;title&gt;</strong> for the browser tab and
+                <strong>&lt;meta name="viewport"&gt;</strong> so the page works
+                well on phones.
+              </li>
+              <li>
+                Organize content with semantic tags such as
+                <strong>&lt;header&gt;</strong>, <strong>&lt;nav&gt;</strong>,
+                <strong>&lt;main&gt;</strong>, <strong>&lt;section&gt;</strong>,
+                <strong>&lt;article&gt;</strong>, and
+                <strong>&lt;footer&gt;</strong>.
+              </li>
+              <li>
+                Use headings from <strong>&lt;h1&gt;</strong> to
+                <strong>&lt;h6&gt;</strong> in a logical order. A page should
+                normally have one main <strong>&lt;h1&gt;</strong>.
+              </li>
+              <li>
+                Write paragraphs with <strong>&lt;p&gt;</strong>, important
+                text with <strong>&lt;strong&gt;</strong>, and lists with
+                <strong>&lt;ul&gt;</strong>, <strong>&lt;ol&gt;</strong>, and
+                <strong>&lt;li&gt;</strong>.
+              </li>
+              <li>
+                Links use <strong>&lt;a href="..."&gt;</strong>. Use relative
+                links for your own pages and full URLs for external websites.
+              </li>
+              <li>
+                Images use <strong>&lt;img&gt;</strong>. Always include useful
+                <strong>alt</strong> text so screen readers can describe them.
+              </li>
+              <li>
+                Add video and audio with <strong>&lt;video&gt;</strong> and
+                <strong>&lt;audio&gt;</strong>. The
+                <strong>controls</strong> attribute gives visitors playback
+                controls.
+              </li>
+              <li>
+                Tables use <strong>&lt;table&gt;</strong>,
+                <strong>&lt;tr&gt;</strong>, <strong>&lt;th&gt;</strong>, and
+                <strong>&lt;td&gt;</strong>. Use them for data, not page layout.
               </li>
               <li>
                 Forms are created with <strong>&lt;form&gt;</strong>,
-                <strong>&lt;input&gt;</strong>, and
-                <strong>&lt;button&gt;</strong>.
+                <strong>&lt;label&gt;</strong>, <strong>&lt;input&gt;</strong>,
+                <strong>&lt;textarea&gt;</strong>, and
+                <strong>&lt;button&gt;</strong>. Connect labels to inputs with
+                matching <strong>for</strong> and <strong>id</strong> values.
               </li>
               <li>
-                Links use <strong>&lt;a href="..."&gt;</strong>, and images use
-                <strong>&lt;img src="..."&gt;</strong>.
+                Common input types include <strong>text</strong>,
+                <strong>email</strong>, <strong>password</strong>,
+                <strong>number</strong>, <strong>date</strong>, and
+                <strong>checkbox</strong>. Use <strong>required</strong> for
+                fields that must be completed.
+              </li>
+              <li>
+                HTML attributes add information or behavior. Useful examples
+                include <strong>class</strong>, <strong>id</strong>,
+                <strong>href</strong>, <strong>src</strong>,
+                <strong>target</strong>, <strong>aria-label</strong>, and
+                <strong>data-*</strong> attributes.
+              </li>
+              <li>
+                Prefer semantic HTML and keyboard-friendly controls. Use a real
+                <strong>&lt;button&gt;</strong> for actions instead of making a
+                clickable <strong>&lt;div&gt;</strong>.
               </li>
             </ul>
             <div class="code-block">
-              &lt;h1&gt;Hello Techspire!&lt;/h1&gt; &lt;p&gt;Welcome to web
-              development.&lt;/p&gt; &lt;a
-              href="https://example.com"&gt;Visit&lt;/a&gt;
+              &lt;!DOCTYPE html&gt; &lt;html lang="en"&gt; &lt;head&gt;
+              &lt;meta charset="UTF-8"&gt; &lt;meta name="viewport"
+              content="width=device-width, initial-scale=1.0"&gt;
+              &lt;title&gt;My First Page&lt;/title&gt; &lt;/head&gt; &lt;body&gt;
+              &lt;header&gt; &lt;h1&gt;Hello Techspire!&lt;/h1&gt; &lt;nav&gt; &lt;a
+              href="index.html"&gt;Home&lt;/a&gt; &lt;/nav&gt; &lt;/header&gt; &lt;main&gt;
+              &lt;section&gt; &lt;h2&gt;Welcome&lt;/h2&gt; &lt;p&gt;Build, learn, and
+              create.&lt;/p&gt; &lt;img src="team.jpg" alt="Techspire team"
+              /&gt; &lt;/section&gt; &lt;/main&gt; &lt;footer&gt;Made by Techspire
+              Club&lt;/footer&gt; &lt;/body&gt; &lt;/html&gt;
+            </div>
+            <div class="code-block">
+              &lt;form&gt; &lt;label for="email"&gt;Email&lt;/label&gt; &lt;input
+              id="email" name="email" type="email" required /&gt; &lt;label
+              for="message"&gt;Message&lt;/label&gt; &lt;textarea id="message"
+              name="message"&gt;&lt;/textarea&gt; &lt;button
+              type="submit"&gt;Send&lt;/button&gt; &lt;/form&gt;
             </div>
           </section>
 
