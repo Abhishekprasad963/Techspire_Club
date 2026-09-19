@@ -620,6 +620,15 @@ img {
   box-shadow: none;
 }
 
+#about .section-subtitle {
+  text-align: justify;
+  color: var(--text-secondary);
+  max-width: 980px;
+  margin: 0 auto 3.5rem;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
 .section-subtitle {
   text-align: center;
   color: var(--text-secondary);
